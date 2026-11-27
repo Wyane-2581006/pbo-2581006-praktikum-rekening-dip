@@ -9,7 +9,10 @@ public class BankSolid {
         BisaDitarik[] bisaDitarik = {ani, citra, budi};
         BerBunga[] berbunga = { ani, citra, dewi };
 
-        ProsesAkhirBulan proses = new ProsesAkhirBulan();
+        Notifikasi notifikasi = new EmailNotifikasi();
+
+        ProsesAkhirBulan proses = new ProsesAkhirBulan(notifikasi);
+
         LaporanBank laporan = new LaporanBank();
 
         laporan.cetakDaftar("========== REKENING AWAL ==========", semua);
